@@ -10,56 +10,153 @@
     <link rel="stylesheet" href="App/Content/stylesheet/style.css">
 </head>
 
-<body ng-app="app">
+<body ng-app="app" ng-controller="fullController">
     <header>
-        <div class="header-top">
-            <h1 ng-bind="header"></h1>
-            <a href="javascript:;"><i class="iconfont icon-fangdajing"></i></a>
+        <div class="header-top" class="center">
+            <h1 ng-bind="headerTitle"></h1>
+            <a class="header-right center" href="javascript:;"><i class="iconfont icon-fangdajing"></i></a>
         </div>
         <div class="header-btm">
-            <div class="header-box">
+            <div class="header-box center">
                 <span>融资<i class="iconfont icon-angle-down"></i></span>
             </div>
-            <div class="header-box">
-                <span>融资<i class="iconfont icon-angle-down"></i></span>
+            <div class="header-box center">
+                <span>规模<i class="iconfont icon-angle-down"></i></span>
             </div>
-            <div class="header-box">
-                <span>融资<i class="iconfont icon-angle-down"></i></span>
+            <div class="header-box center">
+                <span>行业<i class="iconfont icon-angle-down"></i></span>
             </div>
         </div>
     </header>
     <section>
-
+        <div class="main-box" ng-repeat="i in arr">
+            <dl>
+                <dt><img ng-src="{{i.image}}" alt=""></dt>
+                <dd>
+                    <h2 ng-bind="i.title"></h2>
+                    <p ng-bind="i.address"></p>
+                    <p ng-bind="i.info"></p>
+                    <div class="main-btm">
+                        <p ng-bind="i.wanted"></p>
+                        <a href="javascript:;"><i class="iconfont icon-angle-right"></i></a>
+                    </div>
+                </dd>
+            </dl>
+        </div>
     </section>
     <footer>
-        <a href="javascript:;">
+        <a href="javascript:;" class="center">
             <dl>
-                <dt><i class="iconfont icon-27"></i></dt>
+                <dt class="center"><i class="iconfont icon-27"></i></dt>
                 <dd>职位</dd>
             </dl>
         </a>
-        <a href="javascript:;">
+        <a href="javascript:;" class="center">
             <dl>
-                <dt><i class="iconfont icon-27"></i></dt>
+                <dt class="center"><i class="iconfont icon-27"></i></dt>
                 <dd>职位</dd>
             </dl>
         </a>
-        <a href="javascript:;">
+        <a href="javascript:;" class="center">
             <dl>
-                <dt><i class="iconfont icon-27"></i></dt>
+                <dt class="center"><i class="iconfont icon-27"></i></dt>
                 <dd>职位</dd>
             </dl>
         </a>
-        <a href="javascript:;">
+        <a href="javascript:;" class="center">
             <dl>
-                <dt><i class="iconfont icon-27"></i></dt>
+                <dt class="center"><i class="iconfont icon-27"></i></dt>
                 <dd>职位</dd>
             </dl>
         </a>
     </footer>
-    <script src="App/Content/javascript/angular.js"></script>
+    <script src="App/Content/javascript/angular.min.js"></script>
     <script>
-
+        var app = angular.module('app', []);
+        app.controller('fullController', function ($scope) {
+            $scope.headerTitle = '百度';
+            $scope.arr = [
+                {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }, {
+                    title: '百度',
+                    image: 'App/Content/images/pic1.jpg',
+                    address: '北京市海淀区西北旺',
+                    info: '互联网 | 已上市 | 10000人以上',
+                    wanted: '热招：前端工程师等2382个职位'
+                }
+            ];
+        });
     </script>
 </body>
 
